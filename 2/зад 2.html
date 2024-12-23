@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html lang="ru">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="description" content="-">
+        <meta name="keywords" 
+        content="#, #, #">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="style.css">
+        <link type="image/x-icon" href="icona.ico" rel="icon">
+        <script>
+            document.addEventListener("DOMContentLoaded", function () {
+  let carousel = document.querySelector(".carousel");
+  let items = carousel.querySelectorAll(".item");
+  let dotsContainer = document.querySelector(".dots");
+
+  items.forEach((_, index) => {
+    let dot = document.createElement("span");
+    dot.classList.add("dot");
+    if (index === 0) dot.classList.add("active");
+    dot.dataset.index = index;
+    dotsContainer.appendChild(dot);
+  });
+
+  let dots = document.querySelectorAll(".dot");
+
+  function showItem(index) {
+    items.forEach((item, idx) => {
+      item.classList.remove("active");
+      dots[idx].classList.remove("active");
+      if (idx === index) {
+        item.classList.add("active");
+        dots[idx].classList.add("active");
+      }
+    });
+  }
+
+  dots.forEach((dot) => {
+    dot.addEventListener("click", () => {
+      let index = parseInt(dot.dataset.index);
+      showItem(index);
+    });
+  });
+});
+        </script>
+        <title>E.A.T. recipe</title>
+    </head>
+    <body>
+        <div class="top_banner">
+            <div class="top_banner_text">Free delivery around Belarus on orders over 30bun.</div>
+        </div>
+        <div class="navbar">
+            <div class="nav-links">
+                <a href="#" >Shop</a>
+                <a href="#">Recipe</a>
+                <div class="logo">Easy And Tasty recipe</div>
+                <a href="#">About us</a>
+                <a class="ru" href="#">Ru</a>|<a class="en" href="#">En</a>
+                <a href="#">0</a>
+            </div>
+        </div>
+        <div class="content">
+            <div class="img-group group2">
+                <a href="#" class="img1">
+                    <img src="https://avatars.mds.yandex.net/i?id=a722cff47d564cd07938339e02dd03c7_l-5221472-images-thumbs&n=13" alt="Fish">
+                    <div>Fish</div>
+                </a>
+                <a href="#" class="img1">
+                    <img src="https://avatars.mds.yandex.net/i?id=a84e5844624042147acd0329e0d7c742_l-5163390-images-thumbs&n=13" alt="Lazania">
+                    <div> Lazania</div>
+                </a>
+                <a href="#" class="img1">
+                    <img src="https://i0.wp.com/www.retetepractice.ro/wp-content/uploads/2015/07/Placinta-americana-cu-mere.jpg?ssl=1" alt="Pie">
+                    <div>Pie</div> 
+                </a>
+            </div>
+            <div><a href="#" class="right">Watch now</a></div>
+            <h1>E.A.T. recipe is a site with recipe that people share with each other</h1>
+            <p>Russian, Belarusian, West and other dishes</p>
+            <h4>Watch new recipe</h4>
+            <a href="#" class="right">&rarr;</a><a href="#" class="right">&larr;</a>
+            <p class="right">Complex dishes</p>
+            <p class="left">Easy dishes</p>
+            <div class="img-group1 group2">
+                <a href="#" class="img1">
+                    <img src="https://avatars.mds.yandex.net/i?id=556e9ba249ebab3ef2db493915db607e_l-3608063-images-thumbs&n=13" alt="Eggs">
+                    <div>5 minutes </div>
+                </a>
+                <a href="#" class="img1">
+                    <img src="https://avatars.mds.yandex.net/i?id=10c1d42589bcd67ea3e58433d430e3f5_l-5163221-images-thumbs&n=13" alt="meat">
+                    <div>2h</div>
+                </a>
+                <a href="#" class="img1">
+                    <img src="https://www.restoran.ru/upload/iblock/d3a/news_galereya.jpg" alt="Desert">
+                    <div>5h</div>
+                </a>
+            </div>
+            <div><a href="#" class="right">Watch now</a></div>
+            <div><a href="#" class="left1">Watch now</a></div>
+        </div>
+        <br>
+        <div class="form_pos">Chef form</div>
+        <div class="one">
+            <img class="chef" src="https://cache3.youla.io/files/images/780_780/5e/18/5e1857219e94ba1db609ad09.jpg" alt="Chef">
+            <img class="chef_cloth" src="https://fabrika-ivspec.ru/upload/iblock/4fb/yuixikz5zx15zsq51vn1cud5z298iwdk.jpg" alt="Chef_cloth">
+        </div>
+        <div class="profi">For professionals</div>
+        <div class="comments">
+        <p>Browse by categories</p>
+        <a href="#" class="right">&rarr;</a><a href="#" class="right">&larr;</a>
+        <br>
+        <div class="carousel-container">
+            <div class="carousel">
+              <div class="item active">
+                <div class="comment-grid-1">
+                    <div class="comment-item">
+                        <img class="dishe" src="https://www.chugunonline.ru/upload/goods/sources/eee778c6cd28de4261508f863b7a3dc1.jpg" alt="Belarus">
+                        <div class="author"><a href="#">Belarus</a></div>
+                    </div>
+                    <div class="comment-item">
+                        <img class="dishe" src="https://fabrika-kuchnya.ru/d/uzhin_po_gruzinski.jpg" alt="Georgia">
+                        <div class="author"><a href="#">Georgia</a></div>
+                    </div>
+                    <div class="comment-item">
+                        <img class="dishe" src="https://avatars.dzeninfra.ru/get-zen_doc/271828/pub_659ffa33bcf4c36dfa33898d_659ffe509076463336dd5921/scale_1200" alt="Italy">
+                        <div class="author"><a href="#">Italy</a></div>
+                    </div>
+                </div>
+              </div>
+              <div class="item">
+                <div class="comment-grid-1">
+                    <div class="comment-item">
+                        <img class="dishe" src="https://img.goodfon.ru/original/1680x1050/d/64/miska-ryba-led.jpg" alt="Japan">
+                        <div class="author"><a href="#">Japan</a></div>
+                    </div>
+                    <div class="comment-item">
+                        <img class="dishe" src="https://a.d-cd.net/7UhmtVIuZ1NvqQu01dYRGtRYMsQ-960.jpg" alt="France">
+                        <div class="author"><a href="#">France</a></div>
+                    </div>
+                    <div class="comment-item">
+                        <img class="dishe" src="https://cdn.culture.ru/images/8fd77f70-8eff-55cb-8d30-0cf6d98d4f84" alt="Russia">
+                        <div class="author"><a href="#">Russia</a></div>
+                    </div>
+                </div>
+              </div>
+            </div>
+            <div class="dots"></div>
+        </div>    
+        </div>
+        
+        <div class="one">
+            <img class="chef_book" src="https://cdnstatic.rg.ru/uploads/images/159/94/53/Depositphotos_8166666_m-20151000.jpg" alt="chef_book">
+            <img class="chef_book1" src="https://cs2.livemaster.ru/storage/e6/c0/e0b3edd9a58c379a93d5a470c83b--kantselyarskie-tovary-imennaya-kulinarnaya-kniga.jpg" alt="Chef_book1">
+            <div class="corner">Cooking book</div>
+        </div>
+
+        <h1 class="line">Together we can do a lot, taking advantage of the joy of cooking new dishes and sharing them with our loved ones. Our community is always happy to support your endeavors and help you master culinary skills.</h1>
+        <div class="comment-grid">
+            <div class="comment-item">
+                <img class="dishe" src="https://thumbs.dreamstime.com/b/sweet-pastries-cream-puffs-recipe-vector-set-ingredients-vintage-hand-drawn-sketch-baking-light-background-illustration-137779604.jpg" alt="step1">
+                <div class="number"><a href="#">01</a></div>
+                <div>First you need to buy and mix all the ingredients according to the instructions.</div>
+            </div>
+            <div class="comment-item">
+                <img class="dishe" src="https://avatars.mds.yandex.net/i?id=eec1a4c2a68f6f9d69a41f10837914a5d2de0e9e-10952956-images-thumbs&n=13" alt="step2">
+                <div class="number"><a href="#">02</a></div>
+                <div>Prepare the cooking area and put the mixture there. Cook until cooked.</div>
+            </div>
+            <div class="comment-item">
+                <img class="dishe" src="https://i.pinimg.com/474x/92/40/47/924047cbef8ec6f3856b98549ee5b024.jpg?nii=t" alt="step3">
+                <div class="number"><a href="#">03</a></div>
+                <div>Arrange the food on plates and serve it to the desired people. Bon apetite!!!</div>
+            </div>
+        </div>
+
+        <div><a class="left2" href="#">Learn more</a></div>
+
+        <div class="comment-grid-2">
+            <div class="comment-item-2">
+                <img class="food" src="https://cdn.culture.ru/images/f774237e-d1a9-5810-8c6b-a96121128d76" alt="All_world_dishes">
+                <div class="text">All_world_dishes</div>
+            </div>
+            <div class="comment-item-2">
+                <img class="food" src="https://avatars.mds.yandex.net/i?id=dc2ce25e18946d95586c605c3bf5860d_l-5220604-images-thumbs&n=13" alt="Belarusian_dish">
+                <div class="text">Belarusian_dish</div>
+            </div>
+        </div>
+
+        <div class="green-background">
+            <div class="container div2">
+                <div class="blok-line"><div>Proven recipes</div><div>Dishes for every taste</div><div>Cuisine of the whole world</div></div>
+                <h1>Subscribe to our newsletter</h1>
+                <p>Find and share new recipe every day.</p>
+                <a class="desine" href="#">&rarr;</a>
+                <p>________________________</p>
+            </div>
+        </div>
+        <div class="footer">
+            
+            <div class="cont-1">
+              <div class="h">Watch</div>
+              <div class="column">
+              <div class="column1">Belarus</div>
+              <div class="column1">Georgia</div>
+              <div class="column1">Italy</div>
+              <div class="column2">Japan</div>
+              <div class="column2">France</div>
+              <div class="column2">Russia</div>
+              </div>
+            </div>
+            
+            <div class="links">
+                <div class="cont">
+                    <div class="h">Support</div>
+                    <a class="column1" href="#">Mistakes in recipe</a>
+                    <a class="column1" href="#">Bugs</a>
+                    <a class="column1" href="#">FAQ</a>
+                </div>
+                <div class="cont">
+                    <div class="h">E.A.T. recipe</div>
+                    <a class="column1" href="#">About</a>
+                    <a class="column1" href="#">Journal</a>
+                    <a class="column1" href="#">Terms</a>
+                    <a class="column1" href="#">Privacy</a>
+                </div>
+                <div class="cont">
+                    <div class="h">Visit</div>
+                    <a class="column1" href="#">Partners</a>
+                    <a class="column1" href="#">Contact</a>
+                </div>
+            </div>
+            <br>
+            <div class="social">
+                <div class="#">
+                  <div>Social</div>
+                  <a href="#"><img src="https://avatars.mds.yandex.net/i?id=5747c5bd32b57faee9817ac98b4ab5c41b967bd9-4593177-images-thumbs&n=13" alt="Instagram" width="20"></a>
+                  <a href="#"><img src="https://avatars.mds.yandex.net/i?id=e92fcdea0ab6f85b48afff31d7235d9844e2a987-12176797-images-thumbs&n=13" alt="Facebook" width="20"></a>  
+                </div>
+            <div>
+
+                </div>
+            </div>
+        </div>
+    </body>
+</html>
